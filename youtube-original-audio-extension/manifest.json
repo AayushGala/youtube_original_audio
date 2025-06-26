@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Original Audio Default",
+  "version": "1.0.1",
+  "description": "Automatically sets YouTube videos to their original audio track if available. Note: Assumes YouTube interface is in English for menu item detection.",
+  "host_permissions": ["*://*.youtube.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/watch*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "YouTube Original Audio Default",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
